@@ -1,0 +1,8 @@
+#! /bin/bash
+
+scriptName=$(basename $1)
+
+if [ ! -e ~/.local/bin/$scriptName ]; then
+	cp $1 ~/.local/bin
+	chmod +x ~/.local/bin/$scriptName
+fi
